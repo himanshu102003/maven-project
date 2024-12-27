@@ -13,7 +13,7 @@
     <properties>
         <sonar.projectKey>sonar-maven</sonar.projectKey>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>sqp_26daf61f25161682d9fed18922000244e4dc2e40</sonar.login>
+        <sonar.login>sqp_cfe39b6075d60792c1ffe5cd4336688afa34223c</sonar.login>
     </properties>
 
     <!-- Build Information -->
