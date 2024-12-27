@@ -11,9 +11,9 @@
 
     <!-- Properties for SonarQube integration -->
     <properties>
-        <sonar.projectKey>sonar-maven</sonar.projectKey>
+        <sonar.projectKey>sonar-maven-2</sonar.projectKey>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>sqp_cfe39b6075d60792c1ffe5cd4336688afa34223c</sonar.login>
+        <sonar.login>sqp_8304393d1c7a94857583d44636c8aef19d1816d3</sonar.login>
     </properties>
 
     <!-- Build Information -->
