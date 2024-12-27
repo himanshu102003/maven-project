@@ -6,6 +6,7 @@ pipeline {
     }
     environment {
         SONARQUBE_SCANNER_HOME = tool 'SonarQube-Scanner'
+        SONAR_TOKEN = credentials('sonarqube-token')
     }
     stages {
         stage('Checkout') {
@@ -24,12 +25,12 @@ pipeline {
             steps {
                 // Run SonarQube analysis
                 withSonarQubeEnv('SonarQube') {
-                    sh '''
+                    bat '''
                     mvn clean verify sonar:sonar \
                         -Dsonar.projectKey=sonar-maven2 \
                         -Dsonar.projectName='sonar-maven2' \
                         -Dsonar.host.url=http://localhost:9000 \
-                        -Dsonar.token=sqp_8304393d1c7a94857583d44636c8aef19d1816d3
+                        -Dsonar.token=%SONAR_TOKEN%
                     '''
                 }
             }
