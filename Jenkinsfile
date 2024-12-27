@@ -24,7 +24,13 @@ pipeline {
             steps {
                 // Run SonarQube analysis
                 withSonarQubeEnv('SonarQube') {
-                    sh 'mvn sonar:sonar'
+                    sh '''
+                    mvn clean verify sonar:sonar \
+                        -Dsonar.projectKey=sonar-maven2 \
+                        -Dsonar.projectName='sonar-maven2' \
+                        -Dsonar.host.url=http://localhost:9000 \
+                        -Dsonar.token=sqp_8304393d1c7a94857583d44636c8aef19d1816d3
+                    '''
                 }
             }
         }
