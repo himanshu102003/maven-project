@@ -27,10 +27,10 @@ pipeline {
                 withSonarQubeEnv('SonarQube-Scanner') {
                     bat '''
                     mvn clean verify sonar:sonar \
-                        -Dsonar.projectKey=sonar-maven2 \
-                        -Dsonar.projectName='sonar-maven2' \
-                        -Dsonar.host.url=http://localhost:9000 \
-                        -Dsonar.token=%SONAR_TOKEN%
+                      -Dsonar.projectKey=sonar-maven \
+                      -Dsonar.projectName='sonar-maven' \
+                      -Dsonar.host.url=http://localhost:9000 \
+                      -Dsonar.token=sqp_ba8f59443b785a285d1a866a4d028541729fa5a5
                     '''
                 }
             }
