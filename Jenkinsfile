@@ -24,7 +24,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 // Run SonarQube analysis
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('SonarQube-Scanner') {
                     bat '''
                     mvn clean verify sonar:sonar \
                         -Dsonar.projectKey=sonar-maven2 \
