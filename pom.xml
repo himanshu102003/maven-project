@@ -1,7 +1,7 @@
 <properties>
-    <sonar.projectKey>your-project-key</sonar.projectKey>
+    <sonar.projectKey>sonar-maven</sonar.projectKey>
     <sonar.host.url>http://localhost:9000</sonar.host.url>
-    <sonar.login>your-sonar-token</sonar.login>
+    <sonar.login>sqp_26daf61f25161682d9fed18922000244e4dc2e40</sonar.login>
 </properties>
 
 <build>
