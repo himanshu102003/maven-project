@@ -5,7 +5,7 @@ pipeline {
         jdk 'JDK_1.8'
     }
     environment {
-        SONARQUBE_SCANNER_HOME = tool 'SonarQube-Scanner'
+        
         SONAR_TOKEN = credentials('sonarqube-token')
     }
     stages {
