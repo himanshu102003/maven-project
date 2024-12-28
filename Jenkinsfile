@@ -18,17 +18,18 @@ pipeline {
         stage('Build') {
             steps {
                 // Build project using Maven
-                sh 'mvn clean compile'
+                bat 'mvn clean package'
             }
         }
         stage('SonarQube Analysis') {
             steps {
                 // Run SonarQube analysis
                 withSonarQubeEnv('SonarQube-Scanner') {
-                    sh '''
-                    mvn clean verify sonar:sonar \
+                    bat '''
+                    mvn sonar:sonar \
                       -Dsonar.projectKey=sonar-maven \
                       -Dsonar.projectName='sonar-maven' \
+                      -Dsonar.sources=src/main/java \
                       -Dsonar.host.url=http://localhost:9000 \
                       -Dsonar.token=sqp_ba8f59443b785a285d1a866a4d028541729fa5a5
                     '''
